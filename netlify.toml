@@ -1,0 +1,44 @@
+# Netlify config for Young Fresh Coconut.
+# Delete vercel.json if you deploy here (keep only one).
+
+[build]
+  publish = "."
+
+# ── Clean URLs: serve the static .html files at pretty paths ──────────────────
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+[[redirects]]
+  from = "/products"
+  to = "/products.html"
+  status = 200
+
+# ── Old .dc.html URLs → clean URLs (for anything already indexed) ─────────────
+# force = true so the redirect wins even though the physical file exists.
+[[redirects]]
+  from = "/index.dc.html"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/about.dc.html"
+  to = "/about"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/products.dc.html"
+  to = "/products"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
