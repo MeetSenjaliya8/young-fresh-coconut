@@ -18,24 +18,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;background:#fbf7ec;color:#1d2b22;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-  h1,h2,h3,h4,h5{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
-  p{margin:0;}
-  a{text-decoration:none;color:inherit;}
-  ::selection{background:#bdec9a;color:#14532d;}
-  @keyframes ycBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-  @keyframes ycBobS{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
-  @keyframes ycSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-  @keyframes ycPulse{0%,100%{transform:scale(1);opacity:.45}50%{transform:scale(1.12);opacity:.7}}
-  @keyframes ycDrift{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(16px,-12px) rotate(8deg)}}
-  @keyframes ycMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-</style>
-<style>
-.yc-imgslot{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;padding:14px;box-sizing:border-box;width:100%;height:100%;background:#eef4e6;border:1px dashed rgba(20,83,45,.28);color:#6a7d6f;font-size:13px;font-weight:600;line-height:1.35;}
 .ychv0:hover{color:#2e9e57 !important}
 .ychv1:hover{transform:translateY(-2px) !important;box-shadow:0 12px 28px rgba(20,83,45,.42) !important}
 .ychv2:hover{transform:translateY(-3px) !important;box-shadow:0 18px 38px rgba(46,158,87,.45) !important}
@@ -78,8 +62,19 @@
       </div>
       <a href="tel:+919634523546" style="display:flex;align-items:center;gap:10px;background:#14532d;color:#fbf7ec;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 8px 22px rgba(20,83,45,.3);transition:transform .25s ease,box-shadow .25s ease;" class="ychv1">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1Z" fill="#bdec9a"/></svg>
-        <span style="white-space:nowrap;">+91 96 345 23546</span>
+        <span class="yc-phone-text" style="white-space:nowrap;">+91 96 345 23546</span>
       </a>
+      <button id="yc-burger" class="yc-burger" onclick="toggleMenu(event)" aria-label="Open menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border:none;border-radius:12px;background:rgba(20,83,45,.08);cursor:pointer;">
+        <svg data-ico="menu" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#14532d" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg data-ico="close" width="22" height="22" viewBox="0 0 24 24" fill="none" style="display:none;"><path d="m6 6 12 12M18 6 6 18" stroke="#14532d" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="yc-mobile-menu" class="yc-mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
@@ -90,7 +85,7 @@
     <svg style="position:absolute;top:130px;left:6%;animation:ycDrift 8s ease-in-out infinite;pointer-events:none;" width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 12 9 4 21 3c0 12-8 18-18 18Z" fill="#7cc24255"/><path d="M3 21C7 15 13 9 19 6" stroke="#43b56b66" stroke-width="1.2"/></svg>
     <svg style="position:absolute;top:200px;right:30%;animation:ycDrift 11s ease-in-out infinite;pointer-events:none;" width="38" height="38" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 12 9 4 21 3c0 12-8 18-18 18Z" fill="#f6c94544"/></svg>
 
-    <div style="position:relative;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center;">
+    <div class="yc-grid-split" style="position:relative;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center;">
       <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;">
         <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(67,181,107,.13);color:#1f7a44;border:1px solid rgba(67,181,107,.3);padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;">
           <span style="width:8px;height:8px;border-radius:50%;background:#43b56b;box-shadow:0 0 0 4px rgba(67,181,107,.25);"></span>100% Organic · Farm to Cup
@@ -133,7 +128,7 @@
 
   <!-- FEATURES -->
   <section style="background:#ffffff;padding:10px clamp(16px,5vw,56px) 80px;">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="yc-grid-3" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
       <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:24px;padding:34px 30px;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
         <span style="width:60px;height:60px;border-radius:18px;background:linear-gradient(145deg,#bdec9a,#43b56b);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(67,181,107,.3);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 12 9 4 21 3c0 12-8 18-18 18Z" fill="#fff"/><path d="M4 20C8 14 13 9 19 6" stroke="#1f7a44" stroke-width="1.6" stroke-linecap="round"/></svg></span>
         <h4 style="margin:22px 0 8px;font-size:21px;font-weight:700;color:#14532d;">100% Organic Coconut</h4>
@@ -160,7 +155,7 @@
         <span style="display:inline-block;color:#bdec9a;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;">Our Products</span>
         <h2 style="margin:14px 0 0;font-size:clamp(32px,4.4vw,52px);font-weight:800;color:#fff;">Coconuts crafted for <span style="font-style:italic;color:#bdec9a;">every</span> moment</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+      <div class="yc-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
         <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:40px 28px 32px;text-align:center;backdrop-filter:blur(4px);transition:transform .3s ease,background .3s ease;" class="ychv5">
           <div style="position:relative;width:150px;height:150px;margin:0 auto 22px;">
             <span style="position:absolute;top:-6px;left:-6px;width:42px;height:42px;border-radius:50%;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(0,0,0,.25);z-index:2;">01</span>
@@ -203,7 +198,7 @@
 
   <!-- ABOUT -->
   <section id="about" style="position:relative;background:#fbf7ec;padding:clamp(70px,9vw,110px) clamp(16px,5vw,56px);">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:center;">
+    <div class="yc-grid-split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:center;">
       <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;position:relative;">
         <div style="position:absolute;inset:-18px -18px auto auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#9ed36a55,transparent 70%);animation:ycPulse 8s ease-in-out infinite;"></div>
         <div style="position:relative;border-radius:30px;overflow:hidden;box-shadow:0 28px 60px rgba(20,83,45,.22);border:6px solid #fff;">
@@ -298,7 +293,7 @@
   <!-- CONTACT -->
   <section id="contact" style="position:relative;background:linear-gradient(180deg,#fbf7ec,#eef6e1);padding:clamp(70px,9vw,110px) clamp(16px,5vw,56px) 90px;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:54px;">
+      <div data-reveal class="yc-grid-3" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:54px;">
         <div style="background:#fff;border-radius:22px;padding:30px 26px;text-align:center;box-shadow:0 12px 30px rgba(20,83,45,.08);transition:transform .3s ease;" class="ychv9">
           <span style="width:54px;height:54px;border-radius:16px;background:#eafbe0;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="#2e9e57" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="#2e9e57" stroke-width="1.8" stroke-linecap="round"/></svg></span>
           <p style="font-size:13px;font-weight:600;color:#7a8b7e;text-transform:uppercase;letter-spacing:.1em;">Email Us</p>
@@ -323,7 +318,7 @@
         </div>
         <div id="yc-form-success" style="display:none;align-items:center;gap:12px;background:#eafbe0;border:1px solid #9ed36a;border-radius:14px;padding:14px 18px;margin-bottom:20px;color:#1f7a44;font-weight:600;transition:opacity .4s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#2e9e57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Your message was sent successfully. We'll be in touch soon!</div>
         <form onsubmit="submitForm(event)" novalidate="true">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+          <div class="yc-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
             <div>
               <input type="text" name="name" placeholder="Your Name" style="width:100%;padding:15px 18px;border-radius:14px;border:1.5px solid #e3e9dd;background:#fafdf6;font-family:inherit;font-size:15px;color:#14532d;outline:none;transition:border-color .2s ease,box-shadow .2s ease;" class="ycfc0">
               <small data-err="name" style="display:none;color:#d9534f;font-size:13px;margin-top:6px;">Please enter your name.</small>
@@ -351,7 +346,7 @@
 
   <!-- FOOTER -->
   <footer id="contactus" style="background:linear-gradient(170deg,#14532d,#0d3a1f);color:#dcebe0;padding:clamp(56px,7vw,84px) clamp(16px,5vw,56px) 30px;">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,5vw,60px);">
+    <div class="yc-grid-footer" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,5vw,60px);">
       <div>
         <a href="index.html" style="display:flex;align-items:center;gap:11px;margin-bottom:18px;">
           <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#43b56b,#1f7a44);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21c5-3 8-7 8-12 0-1.5-.4-3-1-4-2 1.5-4 2-6 2s-4-.5-6-2c-.6 1-1 2.5-1 4 0 5 3 9 6 12Z" fill="#eafbe0"/></svg></span>
@@ -404,7 +399,7 @@
         <h3 style="color:#fff;font-size:21px;font-weight:800;">Coconut Water — Nutrition &amp; Uses</h3>
         <button onclick="closeModal(event)" aria-label="Close" style="flex:none;width:38px;height:38px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease;" class="ychv14"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
       </div>
-      <div style="padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+      <div class="yc-grid-2" style="padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;">
         <div>
           <div style="font-weight:700;color:#14532d;margin-bottom:12px;font-size:15px;">Nutritional Information (per 100g)</div>
           <table style="width:100%;border-collapse:collapse;font-size:14px;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(20,83,45,.08);">
@@ -461,6 +456,26 @@ function goSlide(i) {
 function goPrev() { if (carTimer) clearInterval(carTimer); goSlide(cIndex - 1); }
 function goNext() { if (carTimer) clearInterval(carTimer); goSlide(cIndex + 1); }
 function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+function setBurgerIcon(open) {
+  var burger = document.getElementById('yc-burger');
+  if (!burger) return;
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  var m = burger.querySelector('[data-ico="menu"]');
+  var c = burger.querySelector('[data-ico="close"]');
+  if (m) m.style.display = open ? 'none' : 'block';
+  if (c) c.style.display = open ? 'block' : 'none';
+}
+function toggleMenu(e) {
+  if (e) e.preventDefault();
+  var menu = document.getElementById('yc-mobile-menu');
+  if (!menu) return;
+  setBurgerIcon(menu.classList.toggle('open'));
+}
+function closeMenu() {
+  var menu = document.getElementById('yc-mobile-menu');
+  if (menu) menu.classList.remove('open');
+  setBurgerIcon(false);
+}
 function toggleFaq(e) {
   var btn = e.currentTarget;
   var body = btn.nextElementSibling;
@@ -568,9 +583,15 @@ function initYC() {
   }
 
   var navlinks = document.querySelector('[data-yc-navlinks]');
-  function applyNav() { if (navlinks) navlinks.style.display = window.innerWidth > 880 ? 'flex' : 'none'; }
+  var mMenu = document.getElementById('yc-mobile-menu');
+  function applyNav() {
+    var wide = window.innerWidth > 880;
+    if (navlinks) navlinks.style.display = wide ? 'flex' : 'none';
+    if (wide) closeMenu();
+  }
   applyNav();
   window.addEventListener('resize', applyNav);
+  if (mMenu) Array.prototype.forEach.call(mMenu.querySelectorAll('a'), function (a) { a.addEventListener('click', closeMenu); });
 
   var nav = document.getElementById('yc-nav');
   var toTop = document.getElementById('yc-totop');
