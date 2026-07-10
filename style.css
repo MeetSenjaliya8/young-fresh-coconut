@@ -216,7 +216,19 @@
    ============================================================ */
 
 /* ---- Base / reset ---- */
-* { box-sizing: border-box; }
+:root {
+  --leaf-cursor: image-set(
+    url("assets/leaf-cursor.png") 1x,
+    url("assets/leaf-cursor@2x.png") 2x
+  ) 4 4, auto;
+  /* Plain-PNG fallback for browsers without image-set cursor support */
+  --leaf-cursor-1x: url("assets/leaf-cursor.png") 4 4, auto;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  cursor: var(--leaf-cursor-1x) !important;
+  cursor: var(--leaf-cursor) !important;
+}
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -225,6 +237,8 @@ body {
   color: #1d2b22;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  cursor: var(--leaf-cursor-1x);
+  cursor: var(--leaf-cursor);
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Bricolage Grotesque', 'Hanken Grotesk', sans-serif;
