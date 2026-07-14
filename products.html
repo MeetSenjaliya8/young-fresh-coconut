@@ -72,7 +72,7 @@
   <section style="position:relative;padding:clamp(120px,16vh,170px) clamp(16px,5vw,56px) 30px;background:radial-gradient(120% 90% at 80% 6%,#fdf3c9 0%,#fbf7ec 44%,#f1f7e4 100%);">
     <div style="position:absolute;top:-60px;right:-50px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#f6d96a55,transparent 70%);animation:ycPulse 7s ease-in-out infinite;pointer-events:none;"></div>
     <svg style="position:absolute;top:140px;left:7%;animation:ycDrift 9s ease-in-out infinite;pointer-events:none;" width="52" height="52" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 12 9 4 21 3c0 12-8 18-18 18Z" fill="#7cc24255"/></svg>
-    <div style="position:relative;max-width:880px;margin:0 auto;text-align:center;">
+    <div style="position:relative;max-width:880px;margin:0 auto;text-align:center;margin-bottom: 5%;">
       <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;">
         <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(67,181,107,.13);color:#1f7a44;border:1px solid rgba(67,181,107,.3);padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;"><span style="width:8px;height:8px;border-radius:50%;background:#43b56b;box-shadow:0 0 0 4px rgba(67,181,107,.25);"></span>Our Collection</span>
         <h1 style="margin:22px 0 0;font-size:clamp(40px,6vw,72px);font-weight:800;color:#14532d;">Six ways to enjoy a <span style="font-style:italic;color:#2e9e57;">coconut</span></h1>
@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-    <svg style="display:block;width:100%;height:auto;margin-top:30px;" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,44 C220,100 430,6 720,40 C1010,74 1230,16 1440,60 L1440,110 L0,110 Z" fill="#ffffff"/></svg>
+    <svg style="display:none;width:100%;height:auto;margin-top:30px;margin-bottom:30px;" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,44 C220,100 430,6 720,40 C1010,74 1230,16 1440,60 L1440,110 L0,110 Z" fill="#ffffff"/></svg>
   </section>
 
   <!-- YOUNG COCONUT -->
@@ -99,6 +99,18 @@
         <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
           <div style="position:relative;height:230px;background:linear-gradient(160deg,#eafbe0,#cdeeb6);">
             <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">01</span>
+            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Green Coconut</span></div>
+          </div>
+          <div style="padding:26px;">
+            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Green Coconut</h4>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">The classic tender green coconut — picked young for its sweet, refreshing water and soft, spoonable jelly.<span data-more style="display:none;"> Straight from the palm with its natural green shell intact, it delivers pure electrolyte-rich hydration the way nature intended — perfect for fresh, wholesome sipping.</span></p>
+            <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#2e9e57;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#2e9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
+          <div style="position:relative;height:230px;background:linear-gradient(160deg,#fef3cf,#fbe199);">
+            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">02</span>
             <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Diamond Cut Coconut</span></div>
           </div>
           <div style="padding:26px;">
@@ -108,26 +120,14 @@
           </div>
         </div>
 
-        <div data-reveal data-reveal-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
-          <div style="position:relative;height:230px;background:linear-gradient(160deg,#fef3cf,#fbe199);">
-            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">02</span>
+        <div data-reveal data-reveal-delay="240" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
+          <div style="position:relative;height:230px;background:linear-gradient(160deg,#d7f0e3,#aee0c6);">
+            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">03</span>
             <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Easy Open Coconut</span></div>
           </div>
           <div style="padding:26px;">
             <h4 style="font-size:21px;font-weight:700;color:#14532d;">Easy Open Coconut</h4>
             <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">A pull-tab style top that pops open in seconds — fresh hydration without a knife or any fuss.<span data-more style="display:none;"> Ideal for on-the-go customers and retail shelves, the easy-open design keeps the water sealed and sterile until the very moment you're ready to drink.</span></p>
-            <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#2e9e57;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#2e9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div>
-        </div>
-
-        <div data-reveal data-reveal-delay="240" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
-          <div style="position:relative;height:230px;background:linear-gradient(160deg,#d7f0e3,#aee0c6);">
-            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">03</span>
-            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Coconut with Straw</span></div>
-          </div>
-          <div style="padding:26px;">
-            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Coconut with Straw</h4>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">Pre-fitted with an eco-friendly straw — grab, sip, and go for instant hydration on the move.<span data-more style="display:none;"> A favourite for beaches, gyms, and festivals, this ready-to-drink format pairs convenience with zero plastic waste thanks to its biodegradable straw.</span></p>
             <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#2e9e57;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#2e9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
@@ -189,9 +189,9 @@
   ============================================================ -->
 
   <!-- POLISH COCONUT (2 products) -->
-  <section id="polish" style="position:relative;background:linear-gradient(165deg,#1f7a44,#14532d);padding:0 0 100px;">
+  <section id="polish" style="position:relative;background:linear-gradient(165deg,#1f7a44,#14532d);padding:0;">
     <svg style="display:block;width:100%;height:auto;margin-top:-1px;" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,40 C1180,96 980,14 720,46 C460,78 240,24 0,64 Z" fill="#ffffff"/></svg>
-    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(16px,5vw,56px);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(16px,5vw,56px) 100px;">
       <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;display:flex;align-items:center;gap:16px;margin-bottom:36px;">
         <span style="width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,#c8a878,#8a6d3b);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(138,109,59,.4);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21c5-3 8-7 8-12 0-1.5-.4-3-1-4-2 1.5-4 2-6 2s-4-.5-6-2c-.6 1-1 2.5-1 4 0 5 3 9 6 12Z" fill="#fff"/></svg></span>
         <div><div style="font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#bdec9a;">Mature &amp; nutrient-rich</div><h2 style="font-size:clamp(26px,3.4vw,40px);font-weight:800;color:#fff;">Polish Coconut</h2></div>
@@ -201,11 +201,11 @@
         <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:26px;overflow:hidden;backdrop-filter:blur(4px);transition:transform .3s ease,background .3s ease;" class="ychv5">
           <div style="position:relative;height:230px;background:linear-gradient(160deg,#3a7a52,#2a5e3f);">
             <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.25);">01</span>
-            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Sprout Coconut</span></div>
+            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Eye Open Coconut</span></div>
           </div>
           <div style="padding:26px;">
-            <h4 style="font-size:21px;font-weight:700;color:#fff;">Sprout Coconut</h4>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#d6ecdb;">The spongy, naturally sweet coconut sprout — a rare delicacy prized for its soft, candy-like texture.<span data-more style="display:none;color:#d6ecdb;"> Formed inside germinating coconuts, the sprout is rich in fibre and a beloved healthy snack across the tropics, eaten fresh or added to desserts.</span></p>
+            <h4 style="font-size:21px;font-weight:700;color:#fff;">Eye Open Coconut</h4>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#d6ecdb;">A polished mature coconut with its natural eye opened — reach the fresh water without any tools.<span data-more style="display:none;color:#d6ecdb;"> Cleanly de-husked and machine-polished to a smooth finish, the pre-opened eye makes sipping effortless while the rich white meat stays protected inside.</span></p>
             <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#bdec9a;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#bdec9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
@@ -213,16 +213,17 @@
         <div data-reveal data-reveal-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:26px;overflow:hidden;backdrop-filter:blur(4px);transition:transform .3s ease,background .3s ease;" class="ychv5">
           <div style="position:relative;height:230px;background:linear-gradient(160deg,#5a4a30,#3e3320);">
             <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.25);">02</span>
-            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Polish Coconut</span></div>
+            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Easy Open Tool Coconut</span></div>
           </div>
           <div style="padding:26px;">
-            <h4 style="font-size:21px;font-weight:700;color:#fff;">Polish Coconut</h4>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#d6ecdb;">A cleanly de-husked, machine-polished mature coconut with a smooth shell and long shelf life.<span data-more style="display:none;color:#d6ecdb;"> Ready for retail and export, polished coconuts protect the rich white meat inside — perfect for milk, oil, and culinary use worldwide.</span></p>
+            <h4 style="font-size:21px;font-weight:700;color:#fff;">Easy Open Tool Coconut</h4>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#d6ecdb;">A polished coconut paired with a simple easy-open tool — pop it open in seconds, no knife required.<span data-more style="display:none;color:#d6ecdb;"> The handy opener lets anyone reach fresh coconut water and meat safely and neatly, making it ideal for homes, cafés, and retail alike.</span></p>
             <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#bdec9a;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#bdec9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
       </div>
     </div>
+    <svg style="display:block;width:100%;height:auto;margin-bottom:-1px;" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,100 L1440,100 L1440,60 C1180,4 980,86 720,54 C460,22 240,76 0,36 Z" fill="#ffffff"/></svg>
   </section>
 
   <!-- CUSTOMISED COCONUT (coming soon — 2 placeholders) -->
@@ -234,25 +235,27 @@
       </div>
       <div class="yc-grid-3" style="display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:760px;margin:0 auto;">
 
-        <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px dashed rgba(20,83,45,.2);" class="ychv4">
-          <div style="position:relative;height:230px;background:linear-gradient(160deg,#f3efe2,#e4ddca);display:flex;align-items:center;justify-content:center;">
-            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#14532d;color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">Coming Soon</span>
-            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#a99f86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
+          <div style="position:relative;height:230px;background:linear-gradient(160deg,#fef3cf,#fbe199);">
+            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">01</span>
+            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Diamond Cut Customised Coconut</span></div>
           </div>
           <div style="padding:26px;">
-            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Coming Soon</h4>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">A new customised coconut option is on the way — get in touch to be the first to know.</p>
+            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Diamond Cut Customised Coconut</h4>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">Our signature diamond cut, tailored to your brand — custom sizes, finishes, and packaging on request.<span data-more style="display:none;"> From logo branding to bespoke cut styles, we shape every coconut to your specification for events, hospitality, and standout retail.</span></p>
+            <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#2e9e57;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#2e9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
 
-        <div data-reveal data-reveal-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px dashed rgba(20,83,45,.2);" class="ychv4">
-          <div style="position:relative;height:230px;background:linear-gradient(160deg,#f3efe2,#e4ddca);display:flex;align-items:center;justify-content:center;">
-            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#14532d;color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">Coming Soon</span>
-            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#a99f86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div data-reveal data-reveal-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.06);transition:transform .3s ease,box-shadow .3s ease;" class="ychv4">
+          <div style="position:relative;height:230px;background:linear-gradient(160deg,#f3efe2,#ddd6c2);">
+            <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.18);">02</span>
+            <div class="yc-imgslot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7a8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Polish Customised Coconut</span></div>
           </div>
           <div style="padding:26px;">
-            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Coming Soon</h4>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">A new customised coconut option is on the way — get in touch to be the first to know.</p>
+            <h4 style="font-size:21px;font-weight:700;color:#14532d;">Polish Customised Coconut</h4>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.62;color:#5c6b60;">Polished coconuts made to your spec — pick the size, finish, and packaging that suits your business.<span data-more style="display:none;"> Ideal for wholesale and export, we customise every detail so your polished coconuts arrive ready for your shelves and your customers.</span></p>
+            <button onclick="toggleMore(event)" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;color:#2e9e57;font-weight:700;font-size:14px;" data-more-btn>Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" data-more-icon style="transition:transform .3s ease;"><path d="m6 9 6 6 6-6" stroke="#2e9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
       </div>
