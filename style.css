@@ -273,6 +273,64 @@ a { text-decoration: none; color: inherit; }
   .yc-palm { width: 62vw; }
 }
 
+/* ── Full coconut palms — flank the About hero, one each side ── */
+/* Sources are JPEGs with a baked-in white background, so multiply drops the
+   white against the hero's light gradient instead of showing a white box. */
+.yc-palm-tree,
+.yc-palm-tree-right {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: auto;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.yc-palm-tree { left: 5%; }
+.yc-palm-tree-right { right: 5%; }
+
+/* Decorative only — they would crowd the centred hero text on narrow screens */
+@media (max-width: 900px) {
+  .yc-palm-tree,
+  .yc-palm-tree-right { display: none; }
+}
+
+/* ── Animated wave carrying a section into the footer ── */
+.yc-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  overflow: hidden; /* clips the double-width svgs as they drift */
+  line-height: 0;
+  pointer-events: none;
+}
+
+/* Each svg is 200% wide and its wave repeats every 1440 units, so sliding it
+   -50% lands on an identical crest and the loop is invisible. */
+.yc-wave svg {
+  display: block;
+  width: 200%;
+  height: auto;
+  will-change: transform;
+  animation: ycMarquee 22s linear infinite;
+}
+
+/* Second layer, phase-flipped and slower — reads as depth rather than one flat band */
+.yc-wave-back {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: .45;
+  animation-duration: 34s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yc-wave svg { animation: none; }
+}
+
 /* ---- Image placeholder slot ---- */
 .yc-imgslot {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
