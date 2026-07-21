@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO -->
+  <title>Gallery — Young Fresh Coconut | Farm, Videos & Photos</title>
+  <meta name="description"
+    content="Explore videos and photo gallery of Young Fresh Coconut — fresh tender coconuts, diamond cut, custom engraved event coconuts, and farm harvesting.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/gallery">
+  <link rel="icon" type="image/png" href="LOGO.png">
+  <meta name="theme-color" content="#1f7a44">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Young Fresh Coconut">
+  <meta property="og:title" content="Gallery — Young Fresh Coconut">
+  <meta property="og:description"
+    content="Watch videos and browse photos of our farm fresh tender coconuts, diamond cut, easy open, and custom engraved coconuts.">
+  <meta property="og:url" content="https://YOURDOMAIN.com/gallery">
+  <meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Logo font: Boogaloo (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .ychv0:hover { color: #2e9e57 !important }
+    .ychv1:hover { transform: translateY(-2px) !important; box-shadow: 0 12px 28px rgba(20, 83, 45, .42) !important }
+    .ychv2:hover { transform: translateY(-4px) !important; box-shadow: 0 16px 36px rgba(20, 83, 45, .15) !important }
+    .ychv3:hover { background: rgba(20, 83, 45, .05) !important }
+    .ychv4:hover { transform: scale(1.04) !important }
+    .ychv5:hover { background: #43b56b !important; transform: translateY(-3px) !important }
+    .ychv6:hover { color: #9ed36a !important }
+    .ychv7:hover { transform: translateY(-3px) !important; box-shadow: 0 16px 38px rgba(37, 211, 102, .55) !important }
+    
+    /* Gallery Filter Pill Active Style */
+    .filter-btn {
+      background: #fff;
+      color: #14532d;
+      border: 1.5px solid rgba(20,83,45,.15);
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #2e9e57;
+      color: #fff;
+      border-color: #2e9e57;
+      box-shadow: 0 8px 20px rgba(46,158,87,.25);
+    }
+
+    /* Lightbox Modal */
+    #yc-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(13,42,23,.92);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    #yc-lightbox.open {
+      display: flex;
+      opacity: 1;
+    }
+    .lightbox-content {
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.5);
+      transform: scale(0.95);
+      transition: transform .3s cubic-bezier(.2,.8,.2,1);
+    }
+    #yc-lightbox.open .lightbox-content {
+      transform: scale(1);
+    }
+  </style>
+</head>
+
+<body>
+  <div data-screen-label="Gallery — young fresh coconut" style="position:relative;width:100%;overflow:hidden;">
+
+    <!-- NAV -->
+    <nav id="yc-nav"
+      style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(16px,5vw,56px) 16px 80px;border-bottom:1px solid rgba(20,60,35,0);transition:background .35s ease,box-shadow .35s ease,border-color .35s ease;">
+      <a href="index.html" style="display:flex;align-items:center;gap:11px;">
+        <img class="yc-logo" src="assets/logo-full.png" alt="Young Fresh Coconut logo"
+          style="height:80px;width:auto;object-fit:contain;" />
+      </a>
+      <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);">
+        <div style="display:none;align-items:center;gap:clamp(14px,2.4vw,32px);font-weight:600;font-size:15px;color:#244233;"
+          data-yc-navlinks>
+          <a href="index.html" style="padding:6px 2px;" class="ychv0">Home</a>
+          <a href="about.html" style="padding:6px 2px;" class="ychv0">About</a>
+          <a href="products.html" style="padding:6px 2px;" class="ychv0">Products</a>
+          <a href="gallery.html" style="padding:6px 2px;color:#2e9e57;">Gallery</a>
+          <a href="index.html#faq" style="padding:6px 2px;" class="ychv0">FAQ</a>
+          <a href="index.html#contact" style="padding:6px 2px;" class="ychv0">Contact</a>
+        </div>
+        <a href="tel:+919082168815"
+          style="display:flex;align-items:center;gap:10px;background:#14532d;color:#fbf7ec;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 8px 22px rgba(20,83,45,.3);transition:transform .25s ease,box-shadow .25s ease;"
+          class="ychv1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1Z"
+              fill="#bdec9a" />
+          </svg>
+          <span class="yc-phone-text" style="white-space:nowrap;">+91 90 821 68815</span>
+        </a>
+        <button id="yc-burger" class="yc-burger" onclick="toggleMenu(event)" aria-label="Open menu"
+          aria-expanded="false"
+          style="display:none;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border:none;border-radius:12px;background:rgba(20,83,45,.08);cursor:pointer;">
+          <svg data-ico="menu" width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="#14532d" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <svg data-ico="close" width="22" height="22" viewBox="0 0 24 24" fill="none" style="display:none;">
+            <path d="m6 6 12 12M18 6 6 18" stroke="#14532d" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div id="yc-mobile-menu" class="yc-mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      style="position:relative;padding:clamp(120px,16vh,170px) clamp(16px,5vw,56px) 40px;background:radial-gradient(120% 90% at 80% 6%,#fdf3c9 0%,#fbf7ec 44%,#f1f7e4 100%);">
+      <div
+        style="position:absolute;top:-60px;right:-50px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#f6d96a55,transparent 70%);animation:ycPulse 7s ease-in-out infinite;pointer-events:none;">
+      </div>
+      <div style="position:relative;max-width:880px;margin:0 auto;text-align:center;">
+        <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;">
+          <span
+            style="display:inline-flex;align-items:center;gap:9px;background:rgba(67,181,107,.13);color:#1f7a44;border:1px solid rgba(67,181,107,.3);padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;"><span
+              style="width:8px;height:8px;border-radius:50%;background:#43b56b;box-shadow:0 0 0 4px rgba(67,181,107,.25);"></span>Visual Experience</span>
+          <h1 style="margin:22px 0 0;font-size:clamp(40px,6vw,72px);font-weight:800;color:#14532d;">Our Farm &amp; Product <span style="font-style:italic;color:#2e9e57;">Gallery</span></h1>
+          <p style="margin:22px auto 0;max-width:600px;font-size:clamp(16px,1.5vw,19px);line-height:1.65;color:#46584b;">Explore our videos and photos capturing pristine tropical palm farms, precision diamond cuts, easy-open coconuts, and custom engraved coconuts for special events.</p>
+
+          <!-- Filter Buttons -->
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px;">
+            <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+            <button class="filter-btn" onclick="filterGallery('videos', this)">📹 Videos</button>
+            <button class="filter-btn" onclick="filterGallery('products', this)">🥥 Products</button>
+            <button class="filter-btn" onclick="filterGallery('custom', this)">✨ Custom Engraved</button>
+            <button class="filter-btn" onclick="filterGallery('farm', this)">🌴 Farm Fresh</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section style="background:#ffffff;padding:60px clamp(16px,5vw,56px) 40px;">
+      <div style="max-width:1180px;margin:0 auto;">
+        <div data-reveal
+          style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;display:flex;align-items:center;gap:16px;margin-bottom:36px;">
+          <span
+            style="width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,#bdec9a,#43b56b);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(67,181,107,.3);"><svg
+              width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="m10 8 6 4-6 4V8Z" fill="#fff"/><circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2"/></svg></span>
+          <div>
+            <div style="font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#43b56b;">Watch in action</div>
+            <h2 style="font-size:clamp(26px,3.4vw,40px);font-weight:800;color:#14532d;">Featured Videos</h2>
+          </div>
+        </div>
+
+        <div class="yc-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;" data-gallery-type="videos">
+
+          <!-- Video Card 1 -->
+          <div data-reveal class="gallery-item videos farm" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.08);box-shadow:0 14px 34px rgba(20,83,45,.06);">
+            <div style="position:relative;width:100%;height:320px;background:#0d3a1f;overflow:hidden;">
+              <video controls poster="assets/coconut_harvest_poster.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-top-shot-of-a-coconut-tree-41584-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:#2e9e57;color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase;">Harvest Video</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:20px;font-weight:800;color:#14532d;margin-bottom:8px;">Tropical Farm Coconut Harvest</h3>
+              <p style="font-size:14.5px;line-height:1.6;color:#5c6b60;margin:0;">Watch how our young green tender coconuts are naturally grown, hand-harvested at peak hydration, and prepared fresh from farm to cup.</p>
+            </div>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div data-reveal data-reveal-delay="140" class="gallery-item videos products" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;background:#fbf7ec;border-radius:26px;overflow:hidden;border:1px solid rgba(20,83,45,.08);box-shadow:0 14px 34px rgba(20,83,45,.06);">
+            <div style="position:relative;width:100%;height:320px;background:#0d3a1f;overflow:hidden;">
+              <video controls poster="assets/How to Open and Eat a Young coconut - Solluna.jpg.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-pouring-fresh-coconut-water-into-a-glass-41586-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:#f0b429;color:#14532d;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase;">Process Video</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:20px;font-weight:800;color:#14532d;margin-bottom:8px;">Diamond Cut &amp; Easy Open Hydration</h3>
+              <p style="font-size:14.5px;line-height:1.6;color:#5c6b60;margin:0;">See the clean, hygienic diamond cutting and easy-open tab mechanism designed for effortless, pure coconut water enjoyment anytime.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY GRID -->
+    <section style="background:#ffffff;padding:40px clamp(16px,5vw,56px) 90px;">
+      <div style="max-width:1180px;margin:0 auto;">
+        <div data-reveal
+          style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;display:flex;align-items:center;gap:16px;margin-bottom:36px;">
+          <span
+            style="width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,#f6d96a,#f0b429);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(240,180,41,.3);"><svg
+              width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#14532d" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="#14532d"/><path d="m21 15-5-5L5 21" stroke="#14532d" stroke-width="2"/></svg></span>
+          <div>
+            <div style="font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#43b56b;">High Resolution Moments</div>
+            <h2 style="font-size:clamp(26px,3.4vw,40px);font-weight:800;color:#14532d;">Photo Collection</h2>
+          </div>
+        </div>
+
+        <div class="yc-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" id="gallery-grid">
+
+          <!-- Photo 1 -->
+          <div data-reveal class="gallery-item custom" onclick="openLightbox('assets/custom_coconut_event.png', 'Laser Engraved Wedding Coconut', 'Custom laser engraved tender coconut served with natural bamboo straw for luxury destination weddings and corporate celebrations.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/custom_coconut_event.png" alt="Custom Engraved Event Coconut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Custom Engraved</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Wedding &amp; Event Monogram</h4>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div data-reveal data-reveal-delay="100" class="gallery-item farm" onclick="openLightbox('assets/coconut_harvest_poster.png', 'Lush Tropical Coconut Farm', 'Golden hour at our tropical coconut groves where A+ grade coconuts are grown in rich natural soil.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/coconut_harvest_poster.png" alt="Coconut Palm Farm" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Farm Fresh</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Sunrise Palm Groves</h4>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div data-reveal data-reveal-delay="200" class="gallery-item products" onclick="openLightbox('assets/Green_Coconut.jpeg', 'Classic Tender Green Coconut', 'Naturally harvested green coconut packed with natural electrolytes and soft tender coconut jelly.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/Green_Coconut.jpeg" alt="Green Coconut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Young Coconut</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Tender Green Coconut</h4>
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div data-reveal class="gallery-item products" onclick="openLightbox('assets/How to Open and Eat a Young coconut - Solluna.jpg.jpeg', 'Precision Diamond Cut Coconut', 'Hygienically trimmed and diamond shaped young coconut for smooth serving and easy opening.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/How to Open and Eat a Young coconut - Solluna.jpg.jpeg" alt="Diamond Cut Coconut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Diamond Cut</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Diamond Shape Trim</h4>
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div data-reveal data-reveal-delay="100" class="gallery-item products" onclick="openLightbox('assets/EASY OPEN POLISH COCONUT, EASY TO DRINK.png', 'Easy Open Polish Coconut', 'Machine-polished mature coconut equipped with pull-tab opener for quick tool-free drinking.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/EASY OPEN POLISH COCONUT, EASY TO DRINK.png" alt="Easy Open Polish Coconut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Polish Series</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Easy Open Tool-Free</h4>
+            </div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div data-reveal data-reveal-delay="200" class="gallery-item products" onclick="openLightbox('assets/EYE OPEN COCONUT .png', 'Eye Open Polished Coconut', 'De-husked smooth polished coconut with pre-opened natural eye for direct straw sipping.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/EYE OPEN COCONUT .png" alt="Eye Open Coconut" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Polish Series</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Eye Open Coconut</h4>
+            </div>
+          </div>
+
+          <!-- Photo 7 -->
+          <div data-reveal class="gallery-item products" onclick="openLightbox('assets/Young Coconut Jelly_ - Scooter Saigon Tour.jpg.jpeg', 'Delicate Coconut Meat & Jelly', 'Soft, sweet coconut jelly inside young coconuts, rich in essential dietary nutrients.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/Young Coconut Jelly_ - Scooter Saigon Tour.jpg.jpeg" alt="Coconut Jelly" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Fresh Jelly</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Tender Coconut Flesh</h4>
+            </div>
+          </div>
+
+          <!-- Photo 8 -->
+          <div data-reveal data-reveal-delay="100" class="gallery-item farm" onclick="openLightbox('assets/Fresh Young Coconut.jpg.jpeg', 'Pure Natural Hydration', 'Directly from palm trees, delivering 100% natural coconut water packed with potassium & electrolytes.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/Fresh Young Coconut.jpg.jpeg" alt="Fresh Coconut Hydration" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Hydration</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Farm To Cup Hydration</h4>
+            </div>
+          </div>
+
+          <!-- Photo 9 -->
+          <div data-reveal data-reveal-delay="200" class="gallery-item custom" onclick="openLightbox('assets/Hamona.png', 'Signature Branded Packaging', 'Specialized custom branding and protective packaging for retail chains and export destinations.')" style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;cursor:pointer;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(20,83,45,.08);height:280px;background:#fbf7ec;">
+            <img src="assets/Hamona.png" alt="Branded Packaging" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;" class="ychv4">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,83,45,.85) 0%, transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;">
+              <span style="font-size:12px;font-weight:700;color:#bdec9a;text-transform:uppercase;letter-spacing:.08em;">Branding</span>
+              <h4 style="font-size:17px;font-weight:700;margin-top:2px;">Export Grade Packaging</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="yc-lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <div style="position:relative;height:450px;background:#0d3a1f;overflow:hidden;">
+          <img id="lightbox-img" src="" alt="Gallery Preview" style="width:100%;height:100%;object-fit:contain;display:block;">
+          <button onclick="closeLightbox()" aria-label="Close image" style="position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div style="padding:24px 28px;background:#fff;">
+          <h3 id="lightbox-title" style="font-size:22px;font-weight:800;color:#14532d;margin-bottom:6px;">Title</h3>
+          <p id="lightbox-desc" style="font-size:15px;line-height:1.65;color:#5c6b60;margin:0;">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section style="position:relative;background:#fbf7ec;padding:clamp(60px,8vw,96px) clamp(16px,5vw,56px) 150px;">
+      <div data-reveal
+        style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;max-width:1000px;margin:0 auto;position:relative;border-radius:30px;overflow:hidden;background-image:url('assets/Fresh%20Young%20Coconut.jpg.jpeg');background-size:cover;background-position:center;padding:clamp(36px,5vw,60px);text-align:center;box-shadow:0 28px 60px rgba(20,83,45,.25);">
+        <div style="position:absolute;top:-50px;right:-30px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.12);"></div>
+        <div style="position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);"></div>
+        <div style="position:relative; background:rgba(20,83,45,.42);border-radius:30px;padding:clamp(36px,5vw,60px);">
+          <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;color:#fff;">Inspired by our gallery?</h2>
+          <p style="margin:16px auto 0;max-width:520px;font-size:17px;line-height:1.6;color:#eafbe0;">Get in touch for wholesale orders, event customized laser engraving, or premium tender coconut supply.</p>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:30px;">
+            <a href="index.html#contact"
+              style="background:#fff;color:#14532d;padding:15px 30px;border-radius:999px;font-weight:800;font-size:16px;box-shadow:0 12px 28px rgba(0,0,0,.18);transition:transform .25s ease;"
+              class="ychv2">Contact Us</a>
+            <a href="https://wa.me/+919082168815?text=Hello%20I%20am%20interested%20in%20your%20coconut%20gallery%20and%20products"
+              target="_blank"
+              style="background:rgba(255,255,255,.16);color:#fff;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;border:1.5px solid rgba(255,255,255,.4);transition:background .25s ease;"
+              class="ychv3">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="yc-wave" aria-hidden="true">
+        <svg class="yc-wave-back" viewBox="0 0 2880 120" preserveAspectRatio="none">
+          <path
+            d="M0,60 Q180,100 360,60 Q540,20 720,60 Q900,100 1080,60 Q1260,20 1440,60 Q1620,100 1800,60 Q1980,20 2160,60 Q2340,100 2520,60 Q2700,20 2880,60 L2880,120 L0,120 Z"
+            fill="#14532d" />
+        </svg>
+        <svg class="yc-wave-front" viewBox="0 0 2880 120" preserveAspectRatio="none">
+          <path
+            d="M0,60 Q180,20 360,60 Q540,100 720,60 Q900,20 1080,60 Q1260,100 1440,60 Q1620,20 1800,60 Q1980,100 2160,60 Q2340,20 2520,60 Q2700,100 2880,60 L2880,120 L0,120 Z"
+            fill="#14532d" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contactus"
+      style="background:linear-gradient(170deg,#14532d,#0d3a1f);color:#dcebe0;padding:clamp(56px,7vw,84px) clamp(16px,5vw,56px) 30px;">
+      <div class="yc-grid-footer"
+        style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,5vw,60px);">
+        <div>
+          <a href="index.html" style="display:inline-flex;align-items:center;margin-bottom:18px;">
+            <img src="assets/footerlogo.png" alt="young fresh coconut logo"
+              style="height:56px;width:auto;object-fit:contain;" />
+          </a>
+          <p style="font-size:15px;line-height:1.7;color:#aecbb4;max-width:340px;">At Young Fresh Coconut, we believe
+            healthy living starts with natural hydration. We offer premium fresh coconuts and coconut water with
+            guaranteed freshness, quality, and great taste.
+
+            🌴 Fresh | 🥥 Natural | 💧 Healthy</p>
+          <div style="display:flex;gap:12px;margin-top:22px;">
+            <a href="https://www.facebook.com/profile.php?id=61592026072870" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .25s ease,transform .25s ease;"
+              class="ychv5"><svg width="18" height="18" viewBox="0 0 24 24" fill="#dcebe0">
+                <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5Z" />
+              </svg></a>
+            <a href="https://www.instagram.com/youngfreshcoco?igsh=MXNnZGZtbTd0d240NA%3D%3D&amp;utm_source=qr"
+              target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .25s ease,transform .25s ease;"
+              class="ychv5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dcebe0"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle cx="17.4" cy="6.6" r="1.2" fill="#dcebe0" stroke="none" />
+              </svg></a>
+            <a href="#" aria-label="LinkedIn"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .25s ease,transform .25s ease;"
+              class="ychv5"><svg width="18" height="18" viewBox="0 0 24 24" fill="#dcebe0">
+                <path
+                  d="M7 9v9H4V9h3ZM5.5 4a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM20 18h-3v-4.7c0-1.2-.5-2-1.6-2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V18h-3V9h3v1.3c.4-.6 1.2-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2V18Z" />
+              </svg></a>
+            <a href="https://in.pinterest.com/youngfreshcoconut25/" target="_blank" rel="noopener noreferrer"
+              aria-label="Pinterest"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .25s ease,transform .25s ease;"
+              class="ychv5"><svg width="18" height="18" viewBox="0 0 24 24" fill="#dcebe0">
+                <path
+                  d="M12 4a8 8 0 0 0-2.9 15.4c-.1-.6-.1-1.6 0-2.3l1-4.1s-.2-.5-.2-1.2c0-1.1.6-1.9 1.4-1.9.7 0 1 .5 1 1.1 0 .7-.4 1.7-.7 2.6-.2.8.4 1.4 1.1 1.4 1.4 0 2.4-1.8 2.4-3.9 0-1.6-1.1-2.8-3-2.8a3.4 3.4 0 0 0-3.6 3.4c0 .7.2 1.1.5 1.5.2.2.2.3.1.5l-.2.7c0 .2-.2.3-.4.2-1-.4-1.5-1.6-1.5-2.9 0-2.2 1.8-4.8 5.5-4.8 2.9 0 4.9 2.1 4.9 4.4 0 3-1.7 5.3-4.2 5.3-.8 0-1.6-.5-1.9-1l-.5 2c-.2.7-.6 1.5-.9 2A8 8 0 1 0 12 4Z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <h5 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:18px;">Explore</h5>
+          <ul
+            style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#aecbb4;">
+            <li><a href="index.html" style="transition:color .2s ease;" class="ychv6">Home</a></li>
+            <li><a href="about.html" style="transition:color .2s ease;" class="ychv6">About Us</a></li>
+            <li><a href="products.html" style="transition:color .2s ease;" class="ychv6">Products</a></li>
+            <li><a href="gallery.html" style="transition:color .2s ease;" class="ychv6">Gallery</a></li>
+            <li><a href="index.html#contact" style="transition:color .2s ease;" class="ychv6">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:18px;">Contact</h5>
+          <ul
+            style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;font-size:15px;color:#aecbb4;">
+            <li style="display:flex;gap:11px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="none" style="margin-top:2px;flex:none;">
+                <path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z" stroke="#9ed36a" stroke-width="1.6" />
+              </svg><a href="https://maps.app.goo.gl/SSBBrnTxpWjv9wM36?g_st=ac" target="_blank" rel="noopener"
+                style="color:inherit;">Young Fresh Coconut LLP</a></li>
+            <li style="display:flex;gap:11px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="none" style="margin-top:2px;flex:none;">
+                <path d="M4 6h16v12H4z" stroke="#9ed36a" stroke-width="1.6" />
+                <path d="m4 7 8 6 8-6" stroke="#9ed36a" stroke-width="1.6" />
+              </svg><a href="mailto:youngfreshcoconut25@gmail.com"
+                style="color:inherit;">youngfreshcoconut25@gmail.com</a></li>
+            <li style="display:flex;gap:11px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="none" style="margin-top:2px;flex:none;">
+                <path
+                  d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1Z"
+                  fill="#9ed36a" />
+              </svg>(+91) 90 821 68815</li>
+            <li style="display:flex;gap:11px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="none" style="margin-top:2px;flex:none;">
+                <circle cx="12" cy="12" r="9" stroke="#9ed36a" stroke-width="1.6" />
+                <path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="#9ed36a"
+                  stroke-width="1.2" />
+              </svg>www.coconut.com</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        style="max-width:1180px;margin:42px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13.5px;color:#8fb097;">
+        <span>© 2026 young fresh coconut. All rights reserved.</span>
+        <span style="display:flex;gap:20px;"><a href="#" style="transition:color .2s ease;" class="ychv6">Privacy
+            Policy</a><a href="#" style="transition:color .2s ease;" class="ychv6">Terms &amp; Conditions</a></span>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP + TO TOP -->
+    <a href="https://wa.me/+919082168815?text=Hello%20I%20am%20interested%20in%20your%20product%20info%20-%20Tender%20Coconut"
+      target="_blank"
+      style="position:fixed;bottom:24px;left:24px;z-index:70;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .25s ease,box-shadow .25s ease;"
+      class="ychv7">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+        <path
+          d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7 2 .8 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4Z" />
+        <path
+          d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1 1 12 20Z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <button id="yc-totop" onclick="scrollTop(event)" aria-label="Back to top"
+      style="position:fixed;bottom:24px;right:24px;z-index:70;width:50px;height:50px;border:none;border-radius:50%;background:#14532d;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(20,83,45,.4);opacity:0;pointer-events:none;transition:opacity .3s ease,transform .25s ease;"
+      class="ychv5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="m6 15 6-6 6 6" stroke="#bdec9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg></button>
+
+  </div>
+
+  <script>
+    function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function setBurgerIcon(open) {
+      var burger = document.getElementById('yc-burger');
+      if (!burger) return;
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var m = burger.querySelector('[data-ico="menu"]');
+      var c = burger.querySelector('[data-ico="close"]');
+      if (m) m.style.display = open ? 'none' : 'block';
+      if (c) c.style.display = open ? 'block' : 'none';
+    }
+    function toggleMenu(e) {
+      if (e) e.preventDefault();
+      var menu = document.getElementById('yc-mobile-menu');
+      if (!menu) return;
+      setBurgerIcon(menu.classList.toggle('open'));
+    }
+    function closeMenu() {
+      var menu = document.getElementById('yc-mobile-menu');
+      if (menu) menu.classList.remove('open');
+      setBurgerIcon(false);
+    }
+
+    /* Lightbox Functions */
+    function openLightbox(imgUrl, title, desc) {
+      var box = document.getElementById('yc-lightbox');
+      document.getElementById('lightbox-img').src = imgUrl;
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-desc').innerText = desc;
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      var box = document.getElementById('yc-lightbox');
+      box.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* Filter Function */
+    function filterGallery(category, btn) {
+      var buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      if (btn) btn.classList.add('active');
+
+      var items = document.querySelectorAll('.gallery-item');
+      items.forEach(function(item) {
+        if (category === 'all') {
+          item.style.display = 'block';
+        } else {
+          if (item.classList.contains(category)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    function initYC() {
+      var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var el = e.target;
+              var d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+              el.style.transitionDelay = (d / 1000) + 's';
+              el.style.opacity = '1';
+              el.style.transform = 'none';
+              io.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+      }
+
+      var navlinks = document.querySelector('[data-yc-navlinks]');
+      var mMenu = document.getElementById('yc-mobile-menu');
+      function applyNav() {
+        var wide = window.innerWidth > 880;
+        if (navlinks) navlinks.style.display = wide ? 'flex' : 'none';
+        if (wide) closeMenu();
+      }
+      applyNav();
+      window.addEventListener('resize', applyNav);
+      if (mMenu) Array.prototype.forEach.call(mMenu.querySelectorAll('a'), function (a) { a.addEventListener('click', closeMenu); });
+
+      var nav = document.getElementById('yc-nav');
+      var toTop = document.getElementById('yc-totop');
+      function onScroll() {
+        if (nav) {
+          var s = window.scrollY > 36;
+          nav.style.background = s ? 'rgba(251,247,236,0.9)' : 'rgba(251,247,236,0)';
+          nav.style.boxShadow = s ? '0 8px 30px rgba(20,60,35,0.10)' : 'none';
+          nav.style.backdropFilter = s ? 'saturate(140%) blur(10px)' : 'none';
+          nav.style.borderColor = s ? 'rgba(20,60,35,0.08)' : 'rgba(20,60,35,0)';
+        }
+        if (toTop) {
+          var v = window.scrollY > 520;
+          toTop.style.opacity = v ? '1' : '0';
+          toTop.style.pointerEvents = v ? 'auto' : 'none';
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+    if (document.readyState !== 'loading') initYC();
+    else document.addEventListener('DOMContentLoaded', initYC);
+  </script>
+</body>
+
+</html>
